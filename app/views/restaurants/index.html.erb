@@ -3,5 +3,3 @@
 <% @restaurants.each do |restaurant| %>
   <li><%= restaurant.category.capitalize %> | <%= restaurant.name %> | <%= restaurant.address %> | <%= restaurant.phone_number %>(<%= link_to "Show", restaurant_path(restaurant)%>)</li>
 <% end %>
-<br>
-<%= link_to "Add a restaurant", new_restaurant_path, class:"btn btn-primary"%>
