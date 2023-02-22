@@ -1,5 +1,9 @@
 require "faker"
 
+Restaurant.destroy_all
+Review.destroy_all
+
+
 5.times do
   restaurant_attr = {
     name: Faker::Restaurant.name,
