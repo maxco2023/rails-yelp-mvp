@@ -4,15 +4,16 @@
 <p><strong>GSM : </strong><%= @restaurant.phone_number %></p>
 <p><strong>Category : </strong><%= @restaurant.category.capitalize%></p>
 
+<%= render "formreview", restaurant: @restaurant, review: @review %>
+
+<br>
 <p><strong>Reviews : </strong></p>
 <ul class="list-group">
   <% @restaurant.reviews.each do |review| %>
-    <li class="list-group-item"><%= review.content %></li>
-    <li class="list-group-item"><%= review.rating %></li>
+    <li class="list-group-item">(<%= review.rating %>/5) | <%= review.content %></li>
   <% end %>
 </ul>
 <br>
 
 
-<%= link_to "Go back to full list", restaurants_path, class:"btn btn-primary" %>
-<%= link_to "Add a review", new_restaurant_review_path(@restaurant), class:"btn btn-secondary" %>
+<%= link_to "Go back to full list", restaurants_path, class:"btn btn-secondary" %>
