@@ -4,7 +4,7 @@
 <p><strong>GSM : </strong><%= @restaurant.phone_number %></p>
 <p><strong>Category : </strong><%= @restaurant.category.capitalize%></p>
 
-<%= render "formreview", restaurant: @restaurant, review: @review %>
+<%= render "restaurants/formreview", restaurant: @restaurant, review: @review %>
 
 <br>
 <p><strong>Reviews : </strong></p>
